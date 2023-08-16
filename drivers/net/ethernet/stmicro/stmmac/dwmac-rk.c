@@ -1813,6 +1813,11 @@ static int rk_gmac_probe(struct platform_device *pdev)
 	struct stmmac_resources stmmac_res;
 	const struct rk_gmac_ops *data;
 	int ret;
+	int i;
+	for(i = 0; i< 10;i++){
+		dev_err(&pdev->dev, "LOG LOG LOG");
+	}
+
 
 	data = of_device_get_match_data(&pdev->dev);
 	if (!data) {
