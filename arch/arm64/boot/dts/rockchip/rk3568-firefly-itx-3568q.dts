@@ -11,6 +11,10 @@
     model = "ITX-3568Q HDMI (Linux)"; // model name
     compatible = "rockchip,rk3568-firefly-itx-3568q", "rockchip,rk3568"; //
 
+    aliases {
+        ethernet0 = &gmac0;
+		ethernet1 = &gmac1;
+    };
 
     chosen: chosen {
         stdout-path = "serial2:1500000n8";
